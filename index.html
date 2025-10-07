@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Biodata Mahasiswa</h1>
+        </header>
+        
+        <div class="content">
+            <div class="profile-section">
+                <div class="photo-container">
+                    <img src="images.png" alt="Foto Profil" id="profile-photo">
+                    <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                    <button id="change-photo-btn" class="btn-secondary">Ganti Foto</button>
+                </div>
+                
+                <div class="form-container">
+                    <form id="biodata-form">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+                            <span class="error-message" id="nama-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nim">NIM</label>
+                            <input type="text" id="nim" name="nim" placeholder="Masukkan NIM">
+                            <span class="error-message" id="nim-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="jurusan">Jurusan</label>
+                            <select id="jurusan" name="jurusan">
+                                <option value="">Pilih Jurusan</option>
+                                <option value="Ilmu Komputer">Ilmu Komputer</option>
+                                <option value="Farmasi">Farmasi</option>
+                                <option value="Biologi">Biologi</option>
+                            </select>
+                            <span class="error-message" id="jurusan-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Masukkan email">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tgl-lahir">Tanggal Lahir</label>
+                            <input type="date" id="tgl-lahir" name="tgl-lahir">
+                            <span class="error-message" id="tgl-lahir-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <textarea id="alamat" name="alamat" placeholder="Masukkan Alamat lengkap"></textarea>
+                            <span class="error-message" id="alamat-error"></span>
+                        </div>
+                        
+                        <div class="button-group">
+                            <button type="submit" id="simpan-btn" class="btn-primary">Simpan Biodata</button>
+                            <button type="button" id="reset-btn" class="btn-secondary">Reset Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="preview-section" id="preview-section">
+                <h2>Preview Biodata</h2>
+                <div class="preview-card">
+                    <div class="preview-photo">
+                        <img src="images.png" alt="Foto Profil Preview" id="preview-photo">
+                    </div>
+                    <div class="preview-details">
+                        <p><strong>Nama:</strong> <span id="preview-nama">-</span></p>
+                        <p><strong>NIM:</strong> <span id="preview-nim">-</span></p>
+                        <p><strong>Jurusan:</strong> <span id="preview-jurusan">-</span></p>
+                        <p><strong>Email:</strong> <span id="preview-email">-</span></p>
+                        <p><strong>Tanggal Lahir:</strong> <span id="preview-tgl-lahir">-</span></p>
+                        <p><strong>Alamat:</strong> <span id="preview-alamat">-</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
